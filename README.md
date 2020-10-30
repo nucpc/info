@@ -110,13 +110,19 @@ Note the trick is to download the [updated MSI](https://go.microsoft.com/fwlink/
 
 After you download the latest MSI install it, leave it as default location for installation folder. (Microsoft Teams Room App v4.5.35.0)
 Once installation is complete then create new share, follow the instruction below
+
 ```
 Open Explorer in C:\Program Files (x86)
-Now select and right click on “Skype Room System Deployment Kit” folder, select properties, click tab Sharing, click Advanced Sharing.
-Click Share this folder, in Share name: called it MTR, click permissions, check allow for Full control, change and read. Click Apply, ok, apply.
+Now select and right click on “Skype Room System Deployment Kit” folder, 
+Select properties, click tab Sharing, click Advanced Sharing.
+Click Share this folder, in Share name: called it MTR, 
+Click permissions, check allow for Full control, 
+Change and read. Click Apply, ok, Apply.
 ```
-Now right click windows logo in the lower left corner, select Windows Powershell(admin).
-In the Powershell Window Terminal, create new map to x by using net use example below
+Now right click windows logo in the lower left corner, 
+Select Windows Powershell(admin).
+In the Powershell Window Terminal, 
+Create new map to x by using net use example below.
 
 Just copy and paste the command below to your powershell window
  
@@ -162,6 +168,7 @@ To boot into Windows connect a Keyboard to the NUC then reboot it while it is co
 ###### E: Update the Intel NUC BIOS: [click HERE to download - Intel-NUC-Kit-NUC8i5BEH](https://downloadcenter.intel.com/product/126148/Intel-NUC-Kit-NUC8i5BEH) 
 
 ###### F: Setup a second nightly reboot to ensure the Teams Room is up and ready after any windows/teams updates occurring during the night. As an example, if the Teams nightly reboot is set for 2 or 3 AM, adding one at 7 AM shortly before the office opens should ensure stability. I've also include the steps below to add another reboot task.
+
 ```
 Press WinKey+R > type taskschd.msc and press Enter (it will launch Task Scheduler)
 Left click from the right pane on the Task Scheduler Library > open Action from the top menu > New Folder... > name it MyTasks > click OK
