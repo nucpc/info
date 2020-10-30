@@ -2,38 +2,23 @@
 
 ### Here's the step by step instructions
 ```
-Brand new unit, let it reboot a few times once it's complete.
-
+Brand new unit
+Let it reboot a few times once it's complete.
 You'll be prompted with setup wizard.
-
 For the initial setup you'll need the account info and password.
-
 Once you enter the account info the unit will reboot.
-
 After reboot, go ahead click on More. Do worry about any error you see.
-
 We still need to configure the unit. Now click on Settings.
-
 You should be prompted to enter Administrator password which is sfb.
-
 In the Settings window, make a note of the current IP Address and Host name.
-
 Click on Windows Settings. Again you will be prompted to enter Administrator password, enter sfb.
-
 Now you'll be in window screen select administrator and enter sfb for the password.
-
 Once you're in windows desktop, press windows key + I, then select System.
-
 Select Remote Desktop, then Eanble Remote Destkop. 
-
 Under Remote Deskto you see "About", click About, click "Rename this PC"
-
 For PC name please use this format "SiteCodeTRSRoomName"
-
 Enter the new PC name and follow the prompt but don't reboot yet, leave the window open.
-
 Update the Time/Date and Timezone, and use the NTP Server 172.17.32.253 or 132.189.40.119
-
 Select Account make sure you have the correct account and password.
 Under "Supported meeting mode" make sure its set to "Microsoft Teams (default)"
 then click Save and exit.
