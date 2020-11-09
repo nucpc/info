@@ -190,4 +190,8 @@ choose Start a program ,
 and press Next in the Program/script field 
 type shutdown /r , and press Next
 And that's all, you can press Finish
+
+or can be done via CMD, script below.
+schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 23:59
+
 ```
