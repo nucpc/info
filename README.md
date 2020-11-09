@@ -195,3 +195,12 @@ or can be done via CMD, script below.
 schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 23:59
 
 ```
+
+
+#### Thinksmart Hub 500 - Type 10V5 
+[Link - Lenovo Support](https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE)
+
+```
+https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE
+
+```
