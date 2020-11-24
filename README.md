@@ -99,6 +99,11 @@ ffmpeg -f dshow -i video="Logitech MeetUp" meetupcam.mp4
 Rem this will only record video without audio.  => ffmpeg -f dshow -i video="Logi Rally Camera" Rallycam.mp4
 copy webcam.mp4 x:\it\filename
 ```
+
+###### Startup Command
+shell:startup    ' current default account startup
+
+shell:common statrup ' common startup
  
 ###### Sample command for capturing Video and Audio with Logitech Rally Plus System
 
