@@ -69,9 +69,10 @@ net start dosvc
 schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 23:59
 
 schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00
+```
 
+###### Added in 2021
 
-##### Added in 2021
 ```
 In Windows Task Scheduler
 Create Daily Task
@@ -93,27 +94,32 @@ Wakeup Minutes "59"
 Wakeup Second"59"
 PCIe ASPM Support "unCheck the mark"
 The reset of the field should be set to default.
-
 ```
+
+
 ```
 shutdown /t 0 /r /f
 ```
-FFMPEG command
+###### FFMPEG command
 Logitech Rally System
+
 ````
 ffmpeg -f dshow -i video="Logi Rally Camera":audio="Echo Cancelling Speakerphone (3- Logi Rally Audio)" LRally.mp4
 ````
-Logitech Meetup System
+
+###### Logitech Meetup System
+
 ```
 ffmpeg -f dshow -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" LMeetup.mp4
-```
+
+
 TRS.BAT
 @echo off
 rem net use x: \\fileserver\Sharefolder /user:domain\username password-here
 c:
 mkdir c:\ffmpeg
 cd\ffmpeg
-```
+
 curl https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20200324-e5d25d1-win64-static.zip -O ffmpeg
 powershell expand-archive -path "c:\ffmpeg\ffmpeg-20200324-e5d25d1-win64-static.zip" -DestinationPath c:\ffmpeg\
 copy c:\ffmpeg\ffmpeg-20200324-e5d25d1-win64-static\bin\*.* c:\ffmpeg\
