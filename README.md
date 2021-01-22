@@ -70,6 +70,30 @@ schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system3
 
 schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00
 
+
+##### Added in 2021
+```
+In Windows Task Scheduler
+Create Daily Task
+
+Called it "Daily Auto Force reboot"
+command c:\windows\system32\shutdown.exe /t 00 /s /f
+
+
+Now get in to NUC BIOS and get to the Power Setting
+change the following
+
+After Power Failure "Power On"
+Deep S4/5" "Check the mark"
+Wake on LAN from S4/S5 "Power On - Normal Boot"
+Wake System from S5 "Check the mark"
+Recurrence "Daily"
+Wakeup Hour "11"
+Wakeup Minutes "59"
+Wakeup Second"59"
+PCIe ASPM Support "unCheck the mark"
+The reset of the field should be set to default.
+
 ```
 ```
 shutdown /t 0 /r /f
