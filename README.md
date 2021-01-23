@@ -257,4 +257,17 @@ You call also run it by hold Windows Key + R to open Run command and then paste 
 shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
 
 ```
-  
+
+###### Good to remember command with shell commands
+
+```
+shell:Startup               - Current User Startup
+shell:Common Startup        - All Startup
+shell:connectionsfolders    - It will bring you to the network connection
+shell:Downloads
+shell:Favorites
+shell:Profile
+shell:UserProfiles
+shell:Windows
+```
+
