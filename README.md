@@ -242,3 +242,19 @@ schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system3
 https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE
 
 ```
+
+
+
+##### Windows Shell Commands
+[Shell Commands for Windows 10: Navigating Common Folders in Windows](https://www.mirazon.com/shell-commands-for-windows-10-navigating-common-folders-in-windows/)
+
+#### Create God Mode folder in your Desktop
+
+``` 
+Create a folder in your desktop called it "GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
+
+You call also run it by hold Windows Key + R to open Run command and then paste this
+shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
+
+```
+  
