@@ -265,7 +265,7 @@ shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
 ```
 shell:Startup               - Current User Startup
 shell:Common Startup        - All Startup
-shell:connectionsfolders    - It will bring you to the network connection
+shell:connectionsfolder     - It will bring you to the network connection
 shell:Downloads
 shell:Favorites
 shell:Profile
