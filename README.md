@@ -29,8 +29,9 @@ then click Save and exit.
 In Windows Task Scheduler
 Create Daily Task
 
-Called it "Daily Auto Force reboot"
-command c:\windows\system32\shutdown.exe /t 00 /s /f
+Called it "Daily Auto Force shutdown"
+schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
+
 
 
 Now get in to NUC BIOS and get to the Power Setting
