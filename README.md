@@ -92,7 +92,7 @@ net start dosvc
 ```
 ###### Schedule automatic restart
 ```
-schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 23:59
+schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
 
 schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00
 ```
