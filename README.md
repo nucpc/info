@@ -105,9 +105,25 @@ schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\
 shutdown /t 0 /r /f
 ```
 ###### FFMPEG command
-Logitech Rally System
+[FFMPEG](https://trac.ffmpeg.org/wiki/DirectShow)
+```
+Example to list dshow input devices:
+ffmpeg -list_devices true -f dshow -i dummy
+
+Example to print a list of options from a selected device:
+ffmpeg -f dshow -list_options true -i video="Integrated Camera"
+
+
+Example to use a dshow device as an input:
+ffmpeg -f dshow -i video="Integrated Camera" out.mp4
+
+Example to use audio and video dshow device as an input:
+ffmpeg -f dshow -i video="Integrated Camera":audio="Microphone name here" out.mp4
+```
 
 ````
+Logitech Rally System
+
 ffmpeg -f dshow -i video="Logi Rally Camera":audio="Echo Cancelling Speakerphone (3- Logi Rally Audio)" LRally.mp4
 ````
 
