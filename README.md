@@ -163,6 +163,17 @@ you'll get alot of error
 it's okay just wait until you see the video feed.
 ```
 
+```
+ffmpeg -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.7.70:8090
+
+same PC
+type in this
+ffplay udp://127.0.0.1:8090
+
+ffplay -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" 
+```
+
+
 
 ###### Startup Command
 shell:startup    ' current default account startup
