@@ -150,6 +150,20 @@ Rem this will only record video without audio.  => ffmpeg -f dshow -i video="Log
 copy webcam.mp4 x:\it\filename
 ```
 
+
+```
+this is command from your PC 
+ffmpeg -f dshow -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -profile:v high -pix_fmt yuvj420p -level:v 4.1 -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -s 640x360 -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.6.85:5000?pkt_size=1316
+
+note: the IP Address 192.177.6.85 is your PC, that where you want to send the video feed
+so now open up another cmd again.
+change dir to yt
+type in ffplay -i udp://0.0.0.0:5000
+you'll get alot of error
+it's okay just wait until you see the video feed.
+```
+
+
 ###### Startup Command
 shell:startup    ' current default account startup
 
