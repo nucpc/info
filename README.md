@@ -23,6 +23,16 @@ Select Account make sure you have the correct account and password.
 Under "Supported meeting mode" make sure its set to "Microsoft Teams (default)"
 then click Save and exit.
 ```
+
+````
+Timezone
+Get-CimInstance Win32_TimeZone | select *
+w32tm / query / configuration
+w32tm /config /manualpeerlist:132.189.40.119 /syncfromflags:manual /reliable:yes /update
+w32tm /config /manualpeerlist:172.17.32.253 /syncfromflags:manual /reliable:yes /update
+w32tm /config /manualpeerlist:time.windows.com /syncfromflags:manual /reliable:yes /update 'Use this if the time doesn't fixed it.
+W32tm /resync /force
+````
 ###### Added in 2021
 
 ```
