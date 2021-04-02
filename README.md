@@ -326,3 +326,6 @@ shell:Windows
 ```
 
 [myForm](https://forms.office.com/Pages/ResponsePage.aspx?id=g7S4tZdV50qOJ_zEZKO1hAhlnEPJ44dOhJgtFWeMOhNUMkcxWEZGTVA2UjVVVUswTkM0MFdMRlNVTC4u)
+```
+find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
+```
