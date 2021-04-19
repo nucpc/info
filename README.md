@@ -121,7 +121,12 @@ schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\syste
 schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00
 ```
 
+````
+Make sure when to used powershell command
+winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell
 
+Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
+````
 
 
 ```
