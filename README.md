@@ -347,3 +347,7 @@ shell:Windows
 ```
 find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
 ```
+
+```
+get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID
+```
