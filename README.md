@@ -349,5 +349,6 @@ find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3x
 ```
 
 ```
+[sitecode]bscdcp10.
 get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID
 ```
