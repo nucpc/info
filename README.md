@@ -357,5 +357,5 @@ get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, Instanc
 batch file
 @echo off
 cls
-runas /noprofile /user:JOS-1-1-recep-01@.com "C:\Progra~2\Microsoft\Edge\Application\msedge.exe "https://teams.microsoft.com/_#/calls/speed-dial""
+runas /noprofile /user:sitecode-1-1-recep-01@.com "C:\Progra~2\Microsoft\Edge\Application\msedge.exe "https://teams.microsoft.com/_#/calls/speed-dial""
 ```
