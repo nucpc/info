@@ -352,3 +352,10 @@ find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3x
 [sitecode]bscdcp10.
 get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID
 ```
+
+```
+batch file
+@echo off
+cls
+runas /noprofile /user:JOS-1-1-recep-01@.com "C:\Progra~2\Microsoft\Edge\Application\msedge.exe \ "https://teams.microsoft.com/_#/calls/speed-dial""
+```
