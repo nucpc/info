@@ -367,6 +367,6 @@ runas /noprofile /user:sitecode-1-1-recep-01@.com "C:\Progra~2\Microsoft\Edge\Ap
 
 
 ```
-To view RAW content of a phote in github use the URL below as an example:
+To view RAW content of a photo in github use the URL below as an example:
 https://raw.githubusercontent.com/nucpc/pc1/main/MTWR.png
 ```
