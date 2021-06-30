@@ -364,7 +364,11 @@ batch file
 cls
 runas /noprofile /user:sitecode-1-1-recep-01@.com "C:\Progra~2\Microsoft\Edge\Application\msedge.exe "https://teams.microsoft.com/_#/calls/speed-dial""
 ```
-
+```
+New Batch File but users will be prompted for username and password
+@echo off
+C:\Windows\System32\cmd.exe /c start shell:AppsFolder\Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge -private https://teams.microsoft.com/_#/calls/speed-dial
+```
 
 ```
 To view RAW content of a photo in github use the URL below as an example:
