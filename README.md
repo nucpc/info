@@ -359,11 +359,11 @@ get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, Instanc
 ```
 
 ```
-batch file
+Batch file
 @echo off
-cls
-runas /noprofile /user:sitecode-1-1-recep-01@.com "C:\Progra~2\Microsoft\Edge\Application\msedge.exe "https://teams.microsoft.com/_#/calls/speed-dial""
+runas /noprofile /user:SiteCode-1-1-recep-01@Domain.com "C:\Progra~2\Microsoft\Edge\Application\msedge.exe -private "https://teams.microsoft.com/_#/calls/speed-dial""
 ```
+
 ```
 New Batch File but users will be prompted for username and password
 @echo off
