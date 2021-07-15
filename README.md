@@ -126,7 +126,7 @@ Make sure when to used powershell command
 winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell
 
 Powershell command remotely
-Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model
 
 
 Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
