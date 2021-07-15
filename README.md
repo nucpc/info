@@ -125,6 +125,10 @@ schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\
 Make sure when to used powershell command
 winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell
 
+Powershell command remotely
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation
+
+
 Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
 ````
 
