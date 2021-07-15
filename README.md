@@ -125,8 +125,12 @@ schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\
 Make sure when to used powershell command
 winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell
 
+To View the currently
 Powershell command remotely
 Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model
+
+Set new Model name
+Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Logitech Image:M203"
 
 
 Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
