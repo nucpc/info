@@ -90,6 +90,8 @@ Get-Item WSMan:\localhost\Client\TrustedHosts
  
 Get-NetConnectionProfile | Set-NetConnectionProfile -NetworkCategory Private
 Set-NetFirewallProfile -Profile Private -Enabled False
+winrm quickconfig -force
+
 
 
 Test-WSMan {enter ComputerName or IP Address}
