@@ -328,7 +328,7 @@ schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system3
 #### Thinksmart Hub 500 - Type 10V5 
 [Link - Lenovo Support](https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE)
 
-``` https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE
+` https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE `
 
 
 
@@ -340,10 +340,10 @@ schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system3
 #### Create God Mode folder in your Desktop
 
 ``` 
-Create a folder in your desktop called it "GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
+Create a folder in your desktop called it `"GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"`
 
 You call also run it by hold Windows Key + R to open Run command and then paste this
-shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
+`shell:::{ED7BA470-8E54-465E-825C-99712043E01C}`
 
 
 
@@ -360,7 +360,9 @@ shell:UserProfiles
 shell:Windows
 ```
 
-[myForm](https://forms.office.com/Pages/ResponsePage.aspx?id=g7S4tZdV50qOJ_zEZKO1hAhlnEPJ44dOhJgtFWeMOhNUMkcxWEZGTVA2UjVVVUswTkM0MFdMRlNVTC4u) `find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey`
+[myForm](https://forms.office.com/Pages/ResponsePage.aspx?id=g7S4tZdV50qOJ_zEZKO1hAhlnEPJ44dOhJgtFWeMOhNUMkcxWEZGTVA2UjVVVUswTkM0MFdMRlNVTC4u) 
+
+`find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey`
 
 
 
