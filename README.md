@@ -133,9 +133,8 @@ Make sure when to used powershell command
 To View the currently
 Powershell command remotely
 
-```
-- Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model
-```
+- ```Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model```
+
 Set new Model name
  
 ```
