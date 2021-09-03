@@ -366,7 +366,7 @@ shell:Windows
 
 
 
-```
+
 Run it under Powershell command
 ```
 get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID
