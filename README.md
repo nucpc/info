@@ -389,7 +389,7 @@ https://raw.githubusercontent.com/nucpc/pc1/main/MTWR.png
 ```
 
 
-### If you are getting this error below, when finishing up the Setup Wizard.
+### If you are getting this error message below, when finishing up the MTR Setup Wizard.
 #### "insert room console into the dock"
 
 ```
