@@ -30,13 +30,13 @@ Get the current time zone
   - `Get-Timezone` or `Get-CimInstance Win32_TimeZone | select *`
 
 Get time zones that match a specified string
-  -     Get-TimeZone -Name "*pac*"
+  - `Get-TimeZone -Name "*pac*"`
 
 Get all available time zones
-  -     Get-TimeZone -ListAvailable
+  - `Get-TimeZone -ListAvailable`
 
 Set the time zone by Id
-  -     Set-TimeZone -Id "Pacific Standard Time" -PassThru
+  - `Set-TimeZone -Id "Pacific Standard Time" -PassThru`
 
 ```
 w32tm / query / configuration
@@ -50,7 +50,7 @@ W32tm /resync /force
 In Windows Task Scheduler
 Create Daily Task
 
-Called it `"Daily Auto Force shutdown"`
+Called it `Daily Auto Force shutdown`
 ```
 schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
 ```
@@ -121,7 +121,6 @@ net start dosvc
 
 - `schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00`
 
-
 Make sure when to used powershell command
 - `winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell`
 
@@ -142,54 +141,45 @@ Set need to re-image
 
 ###### FFMPEG command
 [FFMPEG](https://trac.ffmpeg.org/wiki/DirectShow)
-```
+
 Example to list dshow input devices:
-ffmpeg -list_devices true -f dshow -i dummy
+- `ffmpeg -list_devices true -f dshow -i dummy`
 
 Example to print a list of options from a selected device:
-ffmpeg -f dshow -list_options true -i video="Integrated Camera"
-
+- `ffmpeg -f dshow -list_options true -i video="Integrated Camera"`
 
 Example to use a dshow device as an input:
-ffmpeg -f dshow -i video="Integrated Camera" out.mp4
+- `ffmpeg -f dshow -i video="Integrated Camera" out.mp4`
 
 Example to use audio and video dshow device as an input:
-ffmpeg -f dshow -i video="Integrated Camera":audio="Microphone name here" out.mp4
-
-
+- `ffmpeg -f dshow -i video="Integrated Camera":audio="Microphone name here" out.mp4`
 
 Logitech Rally System
-
-ffmpeg -f dshow -i video="Logi Rally Camera":audio="Echo Cancelling Speakerphone (3- Logi Rally Audio)" LRally.mp4
-
+- `ffmpeg -f dshow -i video="Logi Rally Camera":audio="Echo Cancelling Speakerphone (3- Logi Rally Audio)" LRally.mp4`
 
 ###### Logitech Meetup System
-
+- `ffmpeg -f dshow -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" LMeetup.mp4`
 ```
-ffmpeg -f dshow -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" LMeetup.mp4
-
-
 TRS.BAT
 @echo off
 rem net use x: \\fileserver\Sharefolder /user:domain\username password-here
 c:
 mkdir c:\ffmpeg
 cd\ffmpeg
+```
 
-curl https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20200324-e5d25d1-win64-static.zip -O ffmpeg
-powershell expand-archive -path "c:\ffmpeg\ffmpeg-20200324-e5d25d1-win64-static.zip" -DestinationPath c:\ffmpeg\
-copy c:\ffmpeg\ffmpeg-20200324-e5d25d1-win64-static\bin\*.* c:\ffmpeg\
-ffmpeg -list_devices true -f dshow -i dummy
-Rem  the command below will only record meetup camera without audio.
-ffmpeg -f dshow -i video="Logitech MeetUp" meetupcam.mp4
-Rem this will only record video without audio.  => ffmpeg -f dshow -i video="Logi Rally Camera" Rallycam.mp4
-copy webcam.mp4 x:\it\filename
+- `curl https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20200324-e5d25d1-win64-static.zip -O ffmpeg`
+- `powershell expand-archive -path "c:\ffmpeg\ffmpeg-20200324-e5d25d1-win64-static.zip" -DestinationPath c:\ffmpeg\`
+- `copy c:\ffmpeg\ffmpeg-20200324-e5d25d1-win64-static\bin\*.* c:\ffmpeg\`
+- `ffmpeg -list_devices true -f dshow -i dummy`
+- `Rem  the command below will only record meetup camera without audio.`
+- `ffmpeg -f dshow -i video="Logitech MeetUp" meetupcam.mp4`
+- `Rem this will only record video without audio.  => ffmpeg -f dshow -i video="Logi Rally Camera" Rallycam.mp4`
+- `copy webcam.mp4 x:\it\filename`
 
 
-
-
-this is command from your PC 
-ffmpeg -f dshow -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -profile:v high -pix_fmt yuvj420p -level:v 4.1 -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -s 640x360 -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.6.85:5000?pkt_size=1316
+This is command from your PC 
+- `ffmpeg -f dshow -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -profile:v high -pix_fmt yuvj420p -level:v 4.1 -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -s 640x360 -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.6.85:5000?pkt_size=1316`
 
 note: the IP Address 192.177.6.85 is your PC, that where you want to send the video feed
 so now open up another cmd again.
@@ -198,23 +188,16 @@ type in ffplay -i udp://0.0.0.0:5000
 you'll get alot of error
 it's okay just wait until you see the video feed.
 
+- `ffmpeg -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.7.70:8090`
 
-
-ffmpeg -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.7.70:8090
-
-same PC
+Same PC
 type in this
-ffplay udp://127.0.0.1:8090
-
-ffplay -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" 
-
-
-
+- `ffplay udp://127.0.0.1:8090`
+- `ffplay -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)"`
 
 ###### Startup Command
-shell:startup    ' current default account startup
-
-shell:common statrup ' common startup
+- `shell:startup    ' current default account startup`
+- `shell:common statrup ' common startup`
  
 ###### Sample command for capturing Video and Audio with Logitech Rally Plus System
 
@@ -230,13 +213,12 @@ Note the trick is to download the [updated MSI](https://go.microsoft.com/fwlink/
 After you download the latest MSI install it, leave it as default location for installation folder. (Microsoft Teams Room App v4.5.35.0)
 Once installation is complete then create new share, follow the instruction below
 
-```
-Open Explorer in C:\Program Files (x86)
-Now select and right click on “Skype Room System Deployment Kit” folder, 
-Select properties, click tab Sharing, click Advanced Sharing.
-Click Share this folder, in Share name: called it MTR, 
-Click permissions, check allow for Full control, 
-Change and read. Click Apply, ok, Apply.
+- Open Explorer in C:\Program Files (x86)
+- Now select and right click on “Skype Room System Deployment Kit” folder, 
+- Select properties, click tab Sharing, click Advanced Sharing.
+- Click Share this folder, in Share name: called it MTR, 
+- Click permissions, check allow for Full control, 
+- Change and read. Click Apply, ok, Apply.
 
 Now right click windows logo in the lower left corner, 
 Select Windows Powershell(admin).
@@ -247,13 +229,13 @@ Just copy and paste the command below to your powershell window
  
 copy and paste the command, then press enter to execute it.
 
-Net use x: \\localhost\mtr
+- `Net use x: \\localhost\mtr`
 
 Now let’s do the update by copying the command below and pasting it to your powershell window
  
 copy and paste the command, then press enter to execute it.
 
-Add-AppxPackage  -ForceApplicationShutdown -Path 'x:\$oem$\$1\Rigel\x64\Ship\AppPackages\*\*.appx' -DependencyPath (Get-ChildItem 'x:\$oem$\$1\Rigel\x64\Ship\AppPackages\*\Dependencies\x64\*.appx' | Foreach-Object {$_.FullName})
+- `Add-AppxPackage  -ForceApplicationShutdown -Path 'x:\$oem$\$1\Rigel\x64\Ship\AppPackages\*\*.appx' -DependencyPath (Get-ChildItem 'x:\$oem$\$1\Rigel\x64\Ship\AppPackages\*\Dependencies\x64\*.appx' | Foreach-Object {$_.FullName})`
 
 
 Once it’s complete reboot the MTR system, it will reboot twice 
@@ -267,7 +249,7 @@ There are a few primary things that need to be done to alleviate this situation 
 On the NUC PC perform the following steps: (We recommend that the NUC power settings be set to always On never shutdown due to Tap Screen going to sleep and not waking due to Intel Power management of the internal motherboard USB/HDMI ports.
 
 #### A. Boot into the Windows Admin account and change the Power setting (see attached) Note the power settings may be different depending on the version of Windows 10 your are using. The Intel Motherboard has power save options enabled that reduce power to sections of the circuits which cause issues with the displays and USB connections. So all power save options must be disabled.
-```
+
 In addition to the power setting changes on the attached document Microsoft has recently recommended going into the Device Manager and  then disable the "turn this device off to save power" feature on all USB Root Hubs on a given device. Select the USB Controllers - Root Hub device then right click then select "Properties" then select the "Power management" tab and un-check " Allow computer to turn this device off to save power".
 
 Boot into Windows
@@ -277,9 +259,9 @@ To boot into Windows connect a Keyboard to the NUC then reboot it while it is co
 
 [Link - Intel Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html)
 
-```
+
 By default, the Intel® Driver & Support Assistant places downloaded drivers in
-C:\ProgramData\Intel\DSA\Downloads
+- `C:\ProgramData\Intel\DSA\Downloads`
 
 
 ###### C. Update the NUC HDMI driver: (alleviates Teams related display issues) - [click HERE to download](https://downloadcenter.intel.com/download/29911/Intel-Graphics-DCH-Driver-for-NUC8i3BE-NUC8i5BE-NUC8i7BE?wapkw=HDMI%20nuc8i7beh)
@@ -295,7 +277,7 @@ old link
 
 #### F: Setup a second nightly reboot to ensure the Teams Room is up and ready after any windows/teams updates occurring during the night. As an example, if the Teams nightly reboot is set for 2 or 3 AM, adding one at 7 AM shortly before the office opens should ensure stability. I've also include the steps below to add another reboot task.
 
-```
+
 Press WinKey+R > type taskschd.msc 
 and press Enter (it will launch Task Scheduler)
 Left click from the right pane on the Task Scheduler Library > 
@@ -334,30 +316,28 @@ schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system3
 
 #### Create God Mode folder in your Desktop
 
-``` 
-Create a folder in your desktop called it `"GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"`
+
+Create a folder in your desktop called it 
+- `"GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"`
 
 You call also run it by hold Windows Key + R to open Run command and then paste this
-`shell:::{ED7BA470-8E54-465E-825C-99712043E01C}`
-
-
+- `shell:::{ED7BA470-8E54-465E-825C-99712043E01C}`
 
 ###### Good to remember command with shell commands
 
-```
-shell:Startup               - Current User Startup
-shell:Common Startup        - All Startup
-shell:connectionsfolder     - It will bring you to the network connection
-shell:Downloads
-shell:Favorites
-shell:Profile
-shell:UserProfiles
-shell:Windows
-```
+- `shell:Startup               - Current User Startup`
+- `shell:Common Startup        - All Startup`
+- `shell:connectionsfolder     - It will bring you to the network connection`
+- `shell:Downloads`
+- `shell:Favorites`
+- `shell:Profile`
+- `shell:UserProfiles`
+- `shell:Windows`
+
 
 [myForm](https://forms.office.com/Pages/ResponsePage.aspx?id=g7S4tZdV50qOJ_zEZKO1hAhlnEPJ44dOhJgtFWeMOhNUMkcxWEZGTVA2UjVVVUswTkM0MFdMRlNVTC4u) 
 
-`find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey`
+- `find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey`
 
 
 
