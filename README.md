@@ -346,6 +346,10 @@ You call also run it by hold Windows Key + R to open Run command and then paste 
 Run it under Powershell command
 `get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`
 
+Get present PnP devices in specified states
+`Get-PnpDevice -PresentOnly -Status ERROR,DEGRADED,UNKNOWN`
+
+
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
 
 ### If you are getting this error message below, when finishing up the MTR Setup Wizard.
