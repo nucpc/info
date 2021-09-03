@@ -31,13 +31,13 @@ Get the current time zone
    - `Get-Timezone` or `Get-CimInstance Win32_TimeZone | select *`
 
 Get time zones that match a specified string
-   - `Get-TimeZone -Name "*pac*"`
+   -`Get-TimeZone -Name "*pac*"`
 
 Get all available time zones
-   - `Get-TimeZone -ListAvailable`
-         - 
+   -`Get-TimeZone -ListAvailable`
+
 Set the time zone by Id
-   - `Set-TimeZone -Id "Pacific Standard Time" -PassThru`
+   -`Set-TimeZone -Id "Pacific Standard Time" -PassThru`
 
 ```
 w32tm / query / configuration
