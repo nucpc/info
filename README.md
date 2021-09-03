@@ -1,7 +1,7 @@
 # NUCPC
 
 ### Here's the step by step instructions
-
+-
 Brand new unit
 Let it reboot a few times once it's complete.
 You'll be prompted with setup wizard.
@@ -22,7 +22,7 @@ Update the Time/Date and Timezone, and use the NTP Server 172.17.32.253 or 132.1
 Select Account make sure you have the correct account and password.
 Under "Supported meeting mode" make sure its set to "Microsoft Teams (default)"
 then click Save and exit.
-
+-
 
 
 ### Timezone
