@@ -382,12 +382,6 @@ more details [Here](https://support.hp.com/us-en/document/c06155011) under Troub
 That's usually means you need to have a HDMI/Display Port connected to the Ingest/Input source.
 but if you are helping to configure the unit, workaround is to create a custom XML setting.
 
-
-Create a file called 
-````
-skypesettings.xml
-````
-
 ````
 <SkypeSettings>
 <UserAccount>
@@ -398,7 +392,8 @@ skypesettings.xml
 </SkypeSettings>
 ````
 
-Save it as skypesettings.xml
+Save it as 
+```skypesettings.xml```
 copy it to MTR unit under the folder called 
 
 ````
