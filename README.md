@@ -78,7 +78,7 @@ The reset of the field should be set to default.
 
 [Install VNC Viewer](https://www.tightvnc.com/download/2.8.27/tightvnc-2.8.27-gpl-setup-64bit.msi)
 
-Enable Remote Desktop
+- Enable Remote Desktop
 
 Execute this command in NUC PC
 
@@ -88,18 +88,18 @@ Enable-PSRemoting -SkipNetworkProfileCheck -Force
 Set-Item WSMan:\localhost\Client\TrustedHosts * -Force
 Restart-Service WinRM
 Get-Item WSMan:\localhost\Client\TrustedHosts
- 
 Get-NetConnectionProfile | Set-NetConnectionProfile -NetworkCategory Private
 Set-NetFirewallProfile -Profile Private -Enabled False
 winrm quickconfig -force
+```
 
-
-
-Test-WSMan {enter ComputerName or IP Address}
-winrs -r:IP Address or Computername -u:Computername\admin -p:password cmd or powershell
+  - `Test-WSMan {enter ComputerName or IP Address}`
+  - `winrs -r:IP Address or Computername -u:Computername\admin -p:password cmd or powershell`
 
 Commands in the elevated command prompt:
+```
 netsh advfirewall firewall add rule name="ICMP allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
+```
 
 ##### This command will stop windows update
 ```
@@ -107,7 +107,7 @@ net stop wuauserv
 net stop bits
 net stop dosvc
 sc config wuauserv start=disabled
-
+```
 
 ###### If you want to re-enable the Windows updates at any later time, then give these commands in the elevated command prompt:
 ```
@@ -116,35 +116,42 @@ sc start wuauserv
 net start wuauserv
 net start bits
 net start dosvc
+```
 
 ###### Schedule automatic restart
 ```
 schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
-
+```
+```
 schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00
-
+```
 
 
 Make sure when to used powershell command
-winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell
+`winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell`
 
 To View the currently
 Powershell command remotely
+- 
+```
 Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model
-
+```
 Set new Model name
+- 
+```
 Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Logitech Image:M203"
-
-
+```
 Set need to re-image
+-  
+```
 Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Needs to be RE-IMAGE"
-
+```
+- 
+```
 Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
+```
 
-
-
-
-shutdown /t 0 /r /f
+- `shutdown /t 0 /r /f`
 
 ###### FFMPEG command
 [FFMPEG](https://trac.ffmpeg.org/wiki/DirectShow)
