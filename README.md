@@ -26,8 +26,7 @@ then click Save and exit.
 
 
 ### Timezone
-##### Get the current time zone
-
+Get the current time zone
   - `Get-Timezone`
 or
   - `Get-CimInstance Win32_TimeZone | select *`
@@ -49,29 +48,28 @@ w32tm /config /manualpeerlist:time.windows.com /syncfromflags:manual /reliable:y
 W32tm /resync /force
 ```
 
-###### Added in 2021
-
-
+##### Added in 2021
 In Windows Task Scheduler
 Create Daily Task
 
-Called it "Daily Auto Force shutdown"
+Called it `"Daily Auto Force shutdown"`
+```
 schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
-
-
+```
 
 Now get in to NUC BIOS and get to the Power Setting
 change the following
 
-After Power Failure "Power On"
-Deep S4/5" "Check the mark"
-Wake on LAN from S4/S5 "Power On - Normal Boot"
-Wake System from S5 "Check the mark"
-Recurrence "Daily"
-Wakeup Hour "23"
-Wakeup Minutes "59"
-Wakeup Second"59"
-PCIe ASPM Support "unCheck the mark"
+- `After Power Failure "Power On"`
+- `Deep S4/5" "Check the mark"`
+- `Wake on LAN from S4/S5 "Power On - Normal Boot"`
+- `Wake System from S5 "Check the mark"`
+- `Recurrence "Daily"`
+- `Wakeup Hour "23"`
+- `Wakeup Minutes "59"`
+- `Wakeup Second"59"`
+- `PCIe ASPM Support "unCheck the mark"`
+
 The reset of the field should be set to default.
 
 [Install Logitech Sync new version](https://ufile.io/pkldq4a3)
