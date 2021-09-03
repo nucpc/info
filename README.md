@@ -389,8 +389,8 @@ https://raw.githubusercontent.com/nucpc/pc1/main/MTWR.png
 ```
 
 
-## If you are getting this error below, when finishing up the Setup Wizard.
-### "insert room console into the dock"
+### If you are getting this error below, when finishing up the Setup Wizard.
+#### "insert room console into the dock"
 
 ```
 That's usually means you need to have a HDMI/Display Port connected to the Ingest/Input source.
@@ -412,4 +412,4 @@ copy it to MTR unit under the folder called
 C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState
 
 Restart the device.
-~~~
+```
