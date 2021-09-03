@@ -22,9 +22,9 @@ Update the Time/Date and Timezone, and use the NTP Server 172.17.32.253 or 132.1
 Select Account make sure you have the correct account and password.
 Under "Supported meeting mode" make sure its set to "Microsoft Teams (default)"
 then click Save and exit.
-```
 
-````
+
+
 Timezone
 -Get the current time zone-
 Get-Timezone
@@ -45,7 +45,7 @@ w32tm /config /manualpeerlist:132.189.40.119 /syncfromflags:manual /reliable:yes
 w32tm /config /manualpeerlist:172.17.32.253 /syncfromflags:manual /reliable:yes /update
 w32tm /config /manualpeerlist:time.windows.com /syncfromflags:manual /reliable:yes /update 'Use this if the time doesn't fixed it.
 W32tm /resync /force
-````
+
 ###### Added in 2021
 
 ```
@@ -70,7 +70,7 @@ Wakeup Minutes "59"
 Wakeup Second"59"
 PCIe ASPM Support "unCheck the mark"
 The reset of the field should be set to default.
-```
+
 [Install Logitech Sync new version](https://ufile.io/pkldq4a3)
 
 [Install Logitech Sync](https://download01.logi.com/web/ftp/pub/techsupport/cameras/LogiSyncInstaller_2.0.412.exe)
@@ -99,14 +99,14 @@ winrs -r:IP Address or Computername -u:Computername\admin -p:password cmd or pow
 
 Commands in the elevated command prompt:
 netsh advfirewall firewall add rule name="ICMP allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
-```
+
 ##### This command will stop windows update
 ```
 net stop wuauserv
 net stop bits
 net stop dosvc
 sc config wuauserv start=disabled
-```
+
 
 ###### If you want to re-enable the Windows updates at any later time, then give these commands in the elevated command prompt:
 ```
@@ -115,15 +115,15 @@ sc start wuauserv
 net start wuauserv
 net start bits
 net start dosvc
-```
+
 ###### Schedule automatic restart
 ```
 schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
 
 schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00
-```
 
-````
+
+
 Make sure when to used powershell command
 winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell
 
@@ -139,12 +139,12 @@ Set need to re-image
 Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Needs to be RE-IMAGE"
 
 Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
-````
 
 
-```
+
+
 shutdown /t 0 /r /f
-```
+
 ###### FFMPEG command
 [FFMPEG](https://trac.ffmpeg.org/wiki/DirectShow)
 ```
@@ -160,13 +160,13 @@ ffmpeg -f dshow -i video="Integrated Camera" out.mp4
 
 Example to use audio and video dshow device as an input:
 ffmpeg -f dshow -i video="Integrated Camera":audio="Microphone name here" out.mp4
-```
 
-````
+
+
 Logitech Rally System
 
 ffmpeg -f dshow -i video="Logi Rally Camera":audio="Echo Cancelling Speakerphone (3- Logi Rally Audio)" LRally.mp4
-````
+
 
 ###### Logitech Meetup System
 
@@ -189,10 +189,10 @@ Rem  the command below will only record meetup camera without audio.
 ffmpeg -f dshow -i video="Logitech MeetUp" meetupcam.mp4
 Rem this will only record video without audio.  => ffmpeg -f dshow -i video="Logi Rally Camera" Rallycam.mp4
 copy webcam.mp4 x:\it\filename
-```
 
 
-```
+
+
 this is command from your PC 
 ffmpeg -f dshow -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -profile:v high -pix_fmt yuvj420p -level:v 4.1 -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -s 640x360 -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.6.85:5000?pkt_size=1316
 
@@ -202,9 +202,9 @@ change dir to yt
 type in ffplay -i udp://0.0.0.0:5000
 you'll get alot of error
 it's okay just wait until you see the video feed.
-```
 
-```
+
+
 ffmpeg -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" -preset ultrafast -tune zerolatency -vcodec libx264 -r 10 -b:v 512k -acodec aac -ac 2 -ab 32k -ar 44100 -f mpegts -flush_packets 0 udp://192.177.7.70:8090
 
 same PC
@@ -212,7 +212,7 @@ type in this
 ffplay udp://127.0.0.1:8090
 
 ffplay -f dshow -video_size 1280x720 -framerate 30 -vcodec mjpeg -i video="Logitech MeetUp":audio="Echo Cancelling Speakerphone (Logitech MeetUp Speakerphone)" 
-```
+
 
 
 
@@ -242,7 +242,7 @@ Select properties, click tab Sharing, click Advanced Sharing.
 Click Share this folder, in Share name: called it MTR, 
 Click permissions, check allow for Full control, 
 Change and read. Click Apply, ok, Apply.
-```
+
 Now right click windows logo in the lower left corner, 
 Select Windows Powershell(admin).
 In the Powershell Window Terminal, 
@@ -251,15 +251,15 @@ Create new map to x by using net use example below.
 Just copy and paste the command below to your powershell window
  
 copy and paste the command, then press enter to execute it.
-``` 
+
 Net use x: \\localhost\mtr
-```
+
 Now let’s do the update by copying the command below and pasting it to your powershell window
  
 copy and paste the command, then press enter to execute it.
-```
+
 Add-AppxPackage  -ForceApplicationShutdown -Path 'x:\$oem$\$1\Rigel\x64\Ship\AppPackages\*\*.appx' -DependencyPath (Get-ChildItem 'x:\$oem$\$1\Rigel\x64\Ship\AppPackages\*\Dependencies\x64\*.appx' | Foreach-Object {$_.FullName})
-``` 
+
 
 Once it’s complete reboot the MTR system, it will reboot twice 
 That’s it, you done.
@@ -272,7 +272,7 @@ There are a few primary things that need to be done to alleviate this situation 
 On the NUC PC perform the following steps: (We recommend that the NUC power settings be set to always On never shutdown due to Tap Screen going to sleep and not waking due to Intel Power management of the internal motherboard USB/HDMI ports.
 
 #### A. Boot into the Windows Admin account and change the Power setting (see attached) Note the power settings may be different depending on the version of Windows 10 your are using. The Intel Motherboard has power save options enabled that reduce power to sections of the circuits which cause issues with the displays and USB connections. So all power save options must be disabled.
-
+```
 In addition to the power setting changes on the attached document Microsoft has recently recommended going into the Device Manager and  then disable the "turn this device off to save power" feature on all USB Root Hubs on a given device. Select the USB Controllers - Root Hub device then right click then select "Properties" then select the "Power management" tab and un-check " Allow computer to turn this device off to save power".
 
 Boot into Windows
@@ -285,7 +285,7 @@ To boot into Windows connect a Keyboard to the NUC then reboot it while it is co
 ```
 By default, the Intel® Driver & Support Assistant places downloaded drivers in
 C:\ProgramData\Intel\DSA\Downloads
-```
+
 
 ###### C. Update the NUC HDMI driver: (alleviates Teams related display issues) - [click HERE to download](https://downloadcenter.intel.com/download/29911/Intel-Graphics-DCH-Driver-for-NUC8i3BE-NUC8i5BE-NUC8i7BE?wapkw=HDMI%20nuc8i7beh)
 old link
@@ -322,16 +322,15 @@ And that's all, you can press Finish
 or can be done via CMD, script below.
 schtasks /create /sc daily /tn "Daily auto force reboot" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 23:59
 
-```
+
 
 
 #### Thinksmart Hub 500 - Type 10V5 
 [Link - Lenovo Support](https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE)
 
-```
-https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE
+``` https://smartsupport.lenovo.com/us/en/products/SMART/SMART-OFFICE/THINKSMART-HUB-500/10V5/10V50000US/YH010GGE
 
-```
+
 
 
 
@@ -346,7 +345,7 @@ Create a folder in your desktop called it "GodMode.{ED7BA470-8E54-465E-825C-9971
 You call also run it by hold Windows Key + R to open Run command and then paste this
 shell:::{ED7BA470-8E54-465E-825C-99712043E01C}
 
-```
+
 
 ###### Good to remember command with shell commands
 
@@ -359,26 +358,24 @@ shell:Favorites
 shell:Profile
 shell:UserProfiles
 shell:Windows
-```
+
 
 [myForm](https://forms.office.com/Pages/ResponsePage.aspx?id=g7S4tZdV50qOJ_zEZKO1hAhlnEPJ44dOhJgtFWeMOhNUMkcxWEZGTVA2UjVVVUswTkM0MFdMRlNVTC4u)
-```
-find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
-```
+``` find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey
+
 
 #### 
 ```
 Run it under Powershell command
 get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID
-```
-<img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
-```
+``` <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
+
 
 
 ### If you are getting this error message below, when finishing up the MTR Setup Wizard.
 #### "insert room console into the dock"
 <img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/mssrs.jpg?raw=true">
-```` more details [Here].(https://support.hp.com/us-en/document/c06155011) under Troubleshooting search for "Can't complete MS SRS Setup". ```` 
+```` more details [Here].(https://support.hp.com/us-en/document/c06155011) under Troubleshooting search for "Can't complete MS SRS Setup". 
 
 ```That's usually means you need to have a HDMI/Display Port connected to the Ingest/Input source.
 but if you are helping to configure the unit, workaround is to create a custom XML setting. ```
@@ -399,4 +396,3 @@ copy it to MTR unit under the folder called
 C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState
 
 Restart the device.
-```
