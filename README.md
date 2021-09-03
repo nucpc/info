@@ -63,9 +63,9 @@ change the following
   -  `Wake on LAN from S4/S5 "Power On - Normal Boot"`
   -  `Wake System from S5 "Check the mark"`
   -  `Recurrence "Daily"`
-  -  `Wakeup Hour "23"`
-  -  `Wakeup Minutes "59"`
-  -  `Wakeup Second"59"`
+    -  `Wakeup Hour "23"`
+    -  `Wakeup Minutes "59"`
+    -  `Wakeup Second"59"`
   -  `PCIe ASPM Support "unCheck the mark"`
 
 The reset of the field should be set to default.
