@@ -349,6 +349,7 @@ Get present PnP devices in specified states
  - `get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`
  - `Get-PnpDevice -PresentOnly -Status UNKNOWN -FriendlyName *Logi* | Select Status, Class, FriendlyName, InstanceID`
  - `Get-PnpDevice -Class 'Media' | Select Status, Class, FriendlyName, InstanceID`
+ - `Get-PnpDevice -Class AudioEndpoint,MEDIA,USBDevice'
 
 
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
