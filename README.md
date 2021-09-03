@@ -35,6 +35,7 @@ Get time zones that match a specified string
 
 Get all available time zones
    - `Get-TimeZone -ListAvailable`
+   - 
 Set the time zone by Id
    - `Set-TimeZone -Id "Pacific Standard Time" -PassThru`
 
