@@ -27,16 +27,16 @@ then click Save and exit.
 
 ### Timezone
 Get the current time zone
-  - `Get-Timezone` or `Get-CimInstance Win32_TimeZone | select *`
+     - `Get-Timezone` or `Get-CimInstance Win32_TimeZone | select *`
 
 Get time zones that match a specified string
-  - `Get-TimeZone -Name "*pac*"`
+     - `Get-TimeZone -Name "*pac*"`
 
 Get all available time zones
-  - `Get-TimeZone -ListAvailable`
+     - `Get-TimeZone -ListAvailable`
 
 Set the time zone by Id
-  - `Set-TimeZone -Id "Pacific Standard Time" -PassThru`
+     - `Set-TimeZone -Id "Pacific Standard Time" -PassThru`
 
 ```
 w32tm / query / configuration
@@ -336,7 +336,7 @@ You call also run it by hold Windows Key + R to open Run command and then paste 
 
 
 
-     -
+
 [myForm](https://forms.office.com/Pages/ResponsePage.aspx?id=g7S4tZdV50qOJ_zEZKO1hAhlnEPJ44dOhJgtFWeMOhNUMkcxWEZGTVA2UjVVVUswTkM0MFdMRlNVTC4u) 
 -
 
