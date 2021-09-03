@@ -372,8 +372,9 @@ but if you are helping to configure the unit, workaround is to create a custom X
 ````
 
 Save it as 
--  `skypesettings.xml`
+-  `skypesettings.xml`   
 copy it to MTR unit under the folder called 
+
 -  `C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState`
 
 Restart the device.
