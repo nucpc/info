@@ -383,7 +383,7 @@ That's usually means you need to have a HDMI/Display Port connected to the Inges
 but if you are helping to configure the unit, workaround is to create a custom XML setting.
 
 
-Create a file called skypesettings.xml
+Create a file called ````skypesettings.xml````
 
 ````
 <SkypeSettings>
