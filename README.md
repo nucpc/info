@@ -119,36 +119,26 @@ net start dosvc
 ```
 
 ###### Schedule automatic restart
-```
-schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
-```
-```
-schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00
-```
+- `schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59`
+
+- `schtasks /create /sc daily /tn "Auto force reboot 3am" /tr "c:\windows\system32\shutdown.exe /t 0 /r /f" /st 03:00`
 
 
 Make sure when to used powershell command
-`winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell`
+- `winrs -r:IP Address or Computername -u:Computername\admin -p:password powershell`
 
 To View the currently
 Powershell command remotely
 
-- ```Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model```
+- `Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model`
 
 Set new Model name
- 
-```
-- Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Logitech Image:M203"
-```
+- `Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Logitech Image:M203"`
+
 Set need to re-image
-  
-```
-- Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Needs to be RE-IMAGE"
-```
-- 
-```
-- Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
-```
+- `Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Needs to be RE-IMAGE"`
+
+- `Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip`
 
 - `shutdown /t 0 /r /f`
 
