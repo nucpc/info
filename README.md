@@ -370,7 +370,7 @@ find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3x
 [sitecode]bscdcp10.
 get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID
 ```
-<img width="504" alt="MacroRunning" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg">
+<img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg">
 ```
 Batch file
 @echo off
