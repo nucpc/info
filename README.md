@@ -377,7 +377,7 @@ get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, Instanc
 <img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/mssrs.jpg?raw=true">
 
 
-more details [Here](https://support.hp.com/us-en/document/c06155011) under Troubleshooting search for "Can't complete MS SRS Setup". 
+More details click [Here](https://support.hp.com/us-en/document/c06155011) under Troubleshooting search for `"Can't complete MS SRS Setup".`
 
 That's usually means you need to have a HDMI/Display Port connected to the Ingest/Input source.
 but if you are helping to configure the unit, workaround is to create a custom XML setting.
