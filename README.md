@@ -59,7 +59,7 @@ schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\syste
 
 Now get in to NUC BIOS and get to the Power Setting
 change the following
-
+-
   -  `After Power Failure "Power On"`
   -  `Deep S4/5" "Check the mark"`
   -  `Wake on LAN from S4/S5 "Power On - Normal Boot"`
