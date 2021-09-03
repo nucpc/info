@@ -81,7 +81,7 @@ The reset of the field should be set to default.
 
 Execute this command in NUC PC
 
-##### Commands in the elevated Powershell:
+#### ***_Commands in the elevated Powershell:_***
 ```
 Enable-PSRemoting -SkipNetworkProfileCheck -Force
 Set-Item WSMan:\localhost\Client\TrustedHosts * -Force
