@@ -2,7 +2,6 @@
 
 ### Here's the step by step instructions
 
-    -
 Brand new unit
 Let it reboot a few times once it's complete.
 You'll be prompted with setup wizard.
@@ -28,7 +27,7 @@ then click Save and exit.
 
 ### Timezone
 Get the current time zone
-  - `Get-Timezone`
+  -     `Get-Timezone`
 or
   - `Get-CimInstance Win32_TimeZone | select *`
 
