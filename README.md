@@ -56,17 +56,17 @@ Called it `Daily Auto Force shutdown`
 schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
 ```
 
-Now get in to NUC BIOS and get to the Power Setting
-change the following
+__Now get in to NUC BIOS and get to the Power Setting
+change the following__
 -
   -  `After Power Failure "Power On"`
   -  `Deep S4/5" "Check the mark"`
   -  `Wake on LAN from S4/S5 "Power On - Normal Boot"`
   -  `Wake System from S5 "Check the mark"`
   -  `Recurrence "Daily"`
-    -  `Wakeup Hour "23"`
-    -  `Wakeup Minutes "59"`
-    -  `Wakeup Second"59"`
+     -  `Wakeup Hour "23"`
+     -  `Wakeup Minutes "59"`
+     -  `Wakeup Second"59"`
   -  `PCIe ASPM Support "unCheck the mark"`
 
 The reset of the field should be set to default.
