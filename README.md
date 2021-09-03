@@ -375,7 +375,8 @@ get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, Instanc
 ### If you are getting this error message below, when finishing up the MTR Setup Wizard.
 #### "insert room console into the dock"
 <img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/mssrs.jpg?raw=true">
-``` 
+
+ 
 more details [Here].(https://support.hp.com/us-en/document/c06155011) under Troubleshooting search for "Can't complete MS SRS Setup". 
 
 That's usually means you need to have a HDMI/Display Port connected to the Ingest/Input source.
