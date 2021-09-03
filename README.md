@@ -27,9 +27,9 @@ then click Save and exit.
 
 ### Timezone
 Get the current time zone
-  -     `Get-Timezone`
+  -   Get-Timezone
 or
-  - `Get-CimInstance Win32_TimeZone | select *`
+  -   Get-CimInstance Win32_TimeZone | select *
 
 Get time zones that match a specified string
   - `Get-TimeZone -Name "*pac*"`
