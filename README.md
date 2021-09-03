@@ -343,8 +343,8 @@ You call also run it by hold Windows Key + R to open Run command and then paste 
 
 `find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey`
 
-Run it under Powershell command
 Get present PnP devices in specified states
+***_Run it under Powershell command_***
  - `get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`
  - `Get-PnpDevice -PresentOnly -Status ERROR,DEGRADED,UNKNOWN`
 
