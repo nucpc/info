@@ -398,7 +398,7 @@ Create a file called skypesettings.xml
 Save it as skypesettings.xml
 copy it to MTR unit under the folder called 
 
-C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState
+````C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState````
 
 Restart the device.
 
