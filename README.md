@@ -373,6 +373,7 @@ Run it under Powershell command
 get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID
 ```
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
+![Get PNP Device](docs/images/sardegna.jpg)
 
 
 
