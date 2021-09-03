@@ -56,8 +56,8 @@ Called it `Daily Auto Force shutdown`
 schtasks /create /sc daily /tn "Daily auto force shutdown" /tr "c:\windows\system32\shutdown.exe /t 0 /s /f" /st 21:59
 ```
 
-__Now get in to NUC BIOS and get to the Power Setting
-change the following__
+***_Now get in to NUC BIOS and get to the Power Setting
+change the following_***
 
   -  `After Power Failure "Power On"`
   -  `Deep S4/5" "Check the mark"`
