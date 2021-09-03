@@ -344,10 +344,10 @@ You call also run it by hold Windows Key + R to open Run command and then paste 
 `find it (Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey`
 
 Run it under Powershell command
-`get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`
+-`get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`
 
 Get present PnP devices in specified states
-`Get-PnpDevice -PresentOnly -Status ERROR,DEGRADED,UNKNOWN`
+-`Get-PnpDevice -PresentOnly -Status ERROR,DEGRADED,UNKNOWN`
 
 
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
