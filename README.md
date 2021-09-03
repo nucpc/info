@@ -380,7 +380,7 @@ get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, Instanc
 That's usually means you need to have a HDMI/Display Port connected to the Ingest/Input source.
 but if you are helping to configure the unit, workaround is to create a custom XML setting. ```
 
-`````
+```
 Create a file called skypesettings.xml
 
 <SkypeSettings>
