@@ -132,23 +132,23 @@ Make sure when to used powershell command
 
 To View the currently
 Powershell command remotely
-- 
+
 ```
-Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model
+- Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation | Select-Object Model
 ```
 Set new Model name
-- 
+ 
 ```
-Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Logitech Image:M203"
+- Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Logitech Image:M203"
 ```
 Set need to re-image
--  
+  
 ```
-Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Needs to be RE-IMAGE"
+- Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\OEMInformation -name "Model" -Value "Needs to be RE-IMAGE"
 ```
 - 
 ```
-Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
+- Invoke-WebRequest -Uri https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip -OutFile c:\yt\test1\test2\ffmpeg.zip
 ```
 
 - `shutdown /t 0 /r /f`
