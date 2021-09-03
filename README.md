@@ -26,30 +26,32 @@ then click Save and exit.
 
 
 ### Timezone
-##### -Get the current time zone-
+##### Get the current time zone
 
- - `Get-Timezone`
+  - `Get-Timezone`
 or
- - `Get-CimInstance Win32_TimeZone | select *`
+  - `Get-CimInstance Win32_TimeZone | select *`
 
 Get time zones that match a specified string
- - `Get-TimeZone -Name "*pac*"`
+  - `Get-TimeZone -Name "*pac*"`
 
 Get all available time zones
- - `Get-TimeZone -ListAvailable`
+  - `Get-TimeZone -ListAvailable`
 
---Set the time zone by Id--
-```Set-TimeZone -Id "Pacific Standard Time" -PassThru```
+Set the time zone by Id
+  - ```Set-TimeZone -Id "Pacific Standard Time" -PassThru```
 
-```w32tm / query / configuration
+```
+w32tm / query / configuration
 w32tm /config /manualpeerlist:132.189.40.119 /syncfromflags:manual /reliable:yes /update
 w32tm /config /manualpeerlist:172.17.32.253 /syncfromflags:manual /reliable:yes /update
 w32tm /config /manualpeerlist:time.windows.com /syncfromflags:manual /reliable:yes /update 'Use this if the time doesn't fixed it.
 W32tm /resync /force
 ```
+
 ###### Added in 2021
 
-```
+
 In Windows Task Scheduler
 Create Daily Task
 
