@@ -25,7 +25,7 @@ then click Save and exit.
  
 
 
-## Timezone
+### Timezone
 
 Get the current time zone
    - `Get-Timezone` or `Get-CimInstance Win32_TimeZone | select *`
