@@ -381,9 +381,8 @@ copy it to MTR unit under the folder called `C:\Users\Skype\AppData\Local\Packag
 Restart the device.
 
 
-#### ***_MTR Script files:_***
+#### ***_MTR Scripts files from re-install USB by Microsoft_***
 
-***Files***
 ```
 srs.partition
 srs-restore.cmd
