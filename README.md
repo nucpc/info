@@ -349,7 +349,7 @@ Get present PnP devices in specified states
  - `get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`
  - `Get-PnpDevice -PresentOnly -Status UNKNOWN -FriendlyName *Logi* | Select Status, Class, FriendlyName, InstanceID`
  - `Get-PnpDevice -Class 'Media' | Select Status, Class, FriendlyName, InstanceID`
- - `Get-PnpDevice -Class AudioEndpoint,MEDIA,USBDevice'
+ - `Get-PnpDevice -Class AudioEndpoint,MEDIA,USBDevice`
 
 
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
@@ -384,11 +384,11 @@ Restart the device.
 #### ***_MTR Script files:_***
 
 ***Files***
- _srs.partition_
- 
- _srs-restore.cmd_
- 
- _restore_.swm_
+```
+srs.partition
+srs-restore.cmd
+restore_.swm
+```
 
  `srs.partition`
 ```
