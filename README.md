@@ -384,9 +384,9 @@ Restart the device.
 #### ***_MTR Script files:_***
 
 Files
-_srs.partition_
-_srs-restore.cmd_
-_restore_.swm_
+ _srs.partition_
+ _srs-restore.cmd_
+ _restore_.swm_
 
  `srs.partition`
 ```
