@@ -388,7 +388,7 @@ srs.partition
 srs-restore.cmd
 restore_.swm
 
- - 'srs.partition'
+ `srs.partition`
 
 ```
 SELECT DISK 1
@@ -402,7 +402,7 @@ FORMAT FS=NTFS QUICK
 ASSIGN LETTER=C
 ```
 
- - 'srs-restore.cmd
+ `srs-restore.cmd`
 
 ```
 @ECHO OFF
