@@ -384,13 +384,12 @@ Restart the device.
 #### ***_MTR Script files:_***
 
 Files
-._srs.partition
-._srs-restore.cmd
+srs.partition
+srs-restore.cmd
 restore_.swm
 
- - '._srs.partition'
-   - Contains
-   - 
+ - 'srs.partition'
+
 ```
 SELECT DISK 1
 CLEAN
@@ -403,3 +402,16 @@ FORMAT FS=NTFS QUICK
 ASSIGN LETTER=C
 ```
 
+ - 'srs-restore.cmd
+
+```
+@ECHO OFF
+
+ECHO Please wait.
+
+diskpart /s %~dp0srs.partition >NUL
+
+dism /Quiet /Apply-Image /ApplyDir:c:\ /Index:1 /ImageFile:Y:\restore_.swm /SWMFile:Y:\restore_*.swm
+bcdboot c:\Windows /c >NUL
+wpeutil reboot
+```
