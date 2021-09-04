@@ -379,3 +379,24 @@ Save it as
 copy it to MTR unit under the folder called `C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState`
 
 Restart the device.
+
+
+#### ***_MTR Script files:_***
+
+Files
+._srs.partition
+._srs-restore.cmd
+restore_.swm
+
+ - '._srs.partition'
+   - Contains
+   -     SELECT DISK 1
+CLEAN
+CONVERT GPT
+CREATE PARTITION EFI SIZE=300
+FORMAT FS=FAT32 QUICK
+ASSIGN LETTER=Z
+CREATE part PRIMARY
+FORMAT FS=NTFS QUICK
+ASSIGN LETTER=C
+
