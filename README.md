@@ -382,7 +382,7 @@ Restart the device.
 
 
 #### ***_MTR Scripts files from re-install USB by Microsoft_***
-
+-
 ```
 srs.partition
 srs-restore.cmd
@@ -390,6 +390,7 @@ restore_.swm
 ```
 
 srs.partition
+-
 ```
 SELECT DISK 1
 CLEAN
@@ -403,6 +404,7 @@ ASSIGN LETTER=C
 ```
 
 srs-restore.cmd
+-
 ```
 @ECHO OFF
 ECHO Please wait.
