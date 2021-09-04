@@ -390,7 +390,9 @@ restore_.swm
 
  - '._srs.partition'
    - Contains
-   -     SELECT DISK 1
+   - 
+```
+SELECT DISK 1
 CLEAN
 CONVERT GPT
 CREATE PARTITION EFI SIZE=300
@@ -399,4 +401,5 @@ ASSIGN LETTER=Z
 CREATE part PRIMARY
 FORMAT FS=NTFS QUICK
 ASSIGN LETTER=C
+```
 
