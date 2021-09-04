@@ -404,8 +404,7 @@ ASSIGN LETTER=C
 
  `srs-restore.cmd`
 
-```
-@ECHO OFF
+```@ECHO OFF
 
 ECHO Please wait.
 
@@ -413,5 +412,4 @@ diskpart /s %~dp0srs.partition >NUL
 
 dism /Quiet /Apply-Image /ApplyDir:c:\ /Index:1 /ImageFile:Y:\restore_.swm /SWMFile:Y:\restore_*.swm
 bcdboot c:\Windows /c >NUL
-wpeutil reboot
-```
+wpeutil reboot```
