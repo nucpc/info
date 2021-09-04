@@ -389,7 +389,7 @@ srs-restore.cmd
 restore_.swm
 ```
 
- `srs.partition`
+srs.partition
 ```
 SELECT DISK 1
 CLEAN
@@ -402,7 +402,7 @@ FORMAT FS=NTFS QUICK
 ASSIGN LETTER=C
 ```
 
- `srs-restore.cmd`
+srs-restore.cmd
 ```
 @ECHO OFF
 ECHO Please wait.
