@@ -346,9 +346,9 @@ You call also run it by hold Windows Key + R to open Run command and then paste 
 Get present PnP devices in specified states
 
 ***_Run it under Powershell command_***
- - `get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`   - Display only Logitech devices
- - `Get-PnpDevice -Class AudioEndpoint,MEDIA,USBDevice`                    - Display all AudioEndpoint, MEDIA, USBDevice devices
- - `Get-PnpDevice -Class AudioEndpoint, MEDIA, USBDevice -Status Unknown`  - Display only Unknown devices 
+ - `get-pnpdevice -friendlyname *logi* | select status, Class, FriendlyName, InstanceID`   ****_Display only Logitech devices_****
+ - `Get-PnpDevice -Class AudioEndpoint,MEDIA,USBDevice`                    ***_Display all AudioEndpoint, MEDIA, USBDevice devices_***
+ - `Get-PnpDevice -Class AudioEndpoint, MEDIA, USBDevice -Status Unknown`  ***_Display only Unknown devices_***
 
 
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
