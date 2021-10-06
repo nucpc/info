@@ -354,6 +354,8 @@ Get present PnP devices in specified states
  - `Get-PnpDevice -Class AudioEndpoint,MEDIA,USBDevice`     
 ***_Display only Unknown devices_***               
  - `Get-PnpDevice -Class AudioEndpoint, MEDIA, USBDevice -Status Unknown`  
+***_Display only Unknown devices for Logitech_***               
+ - `Get-PnpDevice -friendlyname *logi* -Status Unknown | Select Status, InstanceID, FriendlyName`  
 
 
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
