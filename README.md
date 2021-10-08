@@ -427,4 +427,21 @@ wpeutil reboot
 -
 [click HERE to download](https://www.ucit.blog/post/configuring-custom-themes-for-microsoft-teams-skype-room-systems)
 
+` C:\Users\Skype\AppData\Local\Packages\Microsoft.SkypeRoomSystem_8wekyb3d8bbwe\LocalState `
+
+` SkypeSettings.xml `
+
+`
+<SkypeSettings>
+    <Theming>
+        <ThemeName>Custom</ThemeName>
+        <CustomThemeImageUrl>wallpaper.jpg</CustomThemeImageUrl>
+        <CustomThemeColor>
+            <RedComponent>1</RedComponent>
+            <GreenComponent>120</GreenComponent>
+            <BlueComponent>199</BlueComponent>
+        </CustomThemeColor>
+    </Theming>
+</SkypeSettings>
+`
 
