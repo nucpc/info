@@ -422,3 +422,9 @@ dism /Quiet /Apply-Image /ApplyDir:c:\ /Index:1 /ImageFile:Y:\restore_.swm /SWMF
 bcdboot c:\Windows /c >NUL
 wpeutil reboot
 ```
+
+### ***_Configuring Custom Themes for MTR Unit_***
+-
+[click HERE to download](https://www.ucit.blog/post/configuring-custom-themes-for-microsoft-teams-skype-room-systems)
+
+
