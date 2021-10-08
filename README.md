@@ -431,7 +431,7 @@ wpeutil reboot
 
 ` SkypeSettings.xml `
 
-`
+```
 <SkypeSettings>
     <Theming>
         <ThemeName>Custom</ThemeName>
@@ -443,5 +443,5 @@ wpeutil reboot
         </CustomThemeColor>
     </Theming>
 </SkypeSettings>
-`
+```
 
