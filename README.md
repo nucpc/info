@@ -282,7 +282,8 @@ ForEach ($Hub in $USBHubs) {
 
 #### "Power Saver MTR"
 
-<img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/docs/images/PowerNUC.jpg?raw=true">
+
+<img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/docs/images/PowerNUC.png?raw=true">
 
 
 
