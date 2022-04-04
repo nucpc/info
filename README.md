@@ -285,7 +285,8 @@ ForEach ($Hub in $USBHubs) {
 
 <img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/docs/images/PowerNUC.png?raw=true">
 
-
+### Force Windows to remove and re-detect an USB 3 Device
+<img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/docs/images/reset_USB3.png?raw=true">
 
 Boot into Windows
 To boot into Windows connect a Keyboard to the NUC then reboot it while it is coming up tap the Windows Key over and over until the Windows Login comes up on the screen. The select the Teams Admin account - password is sfb once completed with changes logout then login to the User account same password.
