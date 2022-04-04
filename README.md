@@ -254,7 +254,7 @@ On the NUC PC perform the following steps: (We recommend that the NUC power sett
 In addition to the power setting changes on the attached document Microsoft has recently recommended going into the Device Manager and  then disable the "turn this device off to save power" feature on all USB Root Hubs on a given device. Select the USB Controllers - Root Hub device then right click then select "Properties" then select the "Power management" tab and un-check " Allow computer to turn this device off to save power".
 
 ### Disable USB HUB Allow Computer Turn Off Save Power
-
+[Disable USB HUB](https://community.spiceworks.com/topic/2190400-disable-usb-hub-allow-computer-turn-off-save-power)
 Before you can run make sure you execute this command first "Powershell -ExecutionPolicy Bypass" under (Admin).
 ```
 $USBHubs = Get-WmiObject -Class Win32_USBHub
