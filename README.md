@@ -256,8 +256,8 @@ In addition to the power setting changes on the attached document Microsoft has 
 ### Disable USB HUB Allow Computer Turn Off Save Power
 
 Before you can run make sure you execute this command first "Powershell -ExecutionPolicy Bypass" under (Admin).
-
-`$USBHubs = Get-WmiObject -Class Win32_USBHub
+```
+$USBHubs = Get-WmiObject -Class Win32_USBHub
 $PowerMgmt = Get-WmiObject -Class MSPower_DeviceEnable -Namespace root\wmi
 
 ForEach ($Hub in $USBHubs) {
@@ -277,7 +277,8 @@ ForEach ($Hub in $USBHubs) {
     }
     ElseIf (($VarPowerSettings | Measure).Count -gt 1) {Write-Warning -Message "More than one WMI object representing power settings was found for '$($Hub.Name)', no settings have been changed for this device"}
     Else {Write-Warning -Message "No power settings were found for '$($Hub.Name)', please check if the device supports power saving features"}
-}`
+}
+```
 
 Boot into Windows
 To boot into Windows connect a Keyboard to the NUC then reboot it while it is coming up tap the Windows Key over and over until the Windows Login comes up on the screen. The select the Teams Admin account - password is sfb once completed with changes logout then login to the User account same password.
