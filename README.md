@@ -400,6 +400,36 @@ Get present PnP devices in specified states
 
 <img width="1024" alt="getpnpdevice" src="https://github.com/nucpc/info/blob/main/Sardegna.jpg?raw=true">
 
+
+
+***_First type in_***
+Powershell Admin command
+- 'get-pnpdevice -FriendlyName '*Poly*' | Select Stauts, Class, FriendlyName, InstanceID'
+
+or
+
+- 'get-pnpdevice -Class AudioEndpoint | Where-Object {$_.FriendlyName -like "*Poly*"} | ft status, FriendlyName, InstanceID'
+
+- 'get-pnpdevice  | Where-Object {$_.Class -like "*AudioEndpoint*"} | ft status, FriendlyName, InstanceID'
+
+
+okay from the list
+to remove it
+- 'pnputil /remove-device 'enter InstanceID HERE''
+
+or you can create this via powershell
+this command will capture all unknown device as AudioEndpoint
+- '$unknown = get-pnpdevice -Class AudioEndpoint | Where-Object {$_.Status -eq "Unknown"} | ft status, FriendlyName, InstanceID, Class'
+
+to save it in txt file
+type in
+$unknown >> 1.txt
+
+to remove it
+type in
+
+- 'pnputil /remove-device "SWD\MMDEVAPI\{0.0.0.00000000}.{D7350DC7-645C-4E5A-85CF-9E9D19C822EA}"'
+
 ### If you are getting this error message below, when finishing up the MTR Setup Wizard.
 #### "insert room console into the dock"
 <img width="1024" alt="mssrs" src="https://github.com/nucpc/info/blob/main/mssrs.jpg?raw=true">
